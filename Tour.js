@@ -326,12 +326,13 @@
             options.keyboard = false; /* Bug fixed with option keyboard */
             if (options.useOverlay) {
                 $overlay.remove();    
-            }
+            } 
+            
         },
         bindElements: function() {
 
             $("body").unbind( "click" );
-            
+
             $('body').on('click', '#tourNext', function() {
                 methods.next();
             });
