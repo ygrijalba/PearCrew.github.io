@@ -321,7 +321,7 @@
             $('#tourControls').remove();
             $('#tourtip').remove();
             $tooltip.css({ 'display': 'none' }).html('');
-            options.data = [];
+            options.data.shift();
             step = -1;
             started = false;
             options.keyboard = false; /* Bug fixed with option keyboard */
