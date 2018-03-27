@@ -321,13 +321,14 @@
             $('#tourControls').remove();
             $('#tourtip').remove();
             $tooltip.css({ 'display': 'none' }).html('');
+            options.data = [];
             step = -1;
             started = false;
             options.keyboard = false; /* Bug fixed with option keyboard */
             if (options.useOverlay) {
                 $overlay.remove();    
             } 
-            
+
         },
         bindElements: function() {
 
@@ -382,4 +383,8 @@
 
 
 // Direct Access
-$.aSimpleTour = function(opts, startFrom) { $.fn.aSimpleTour(opts, startFrom);  return this; }
+$.aSimpleTour = function(opts, startFrom) 
+                { 
+                    $.fn.aSimpleTour(opts, startFrom);  
+                    return this; 
+                }
