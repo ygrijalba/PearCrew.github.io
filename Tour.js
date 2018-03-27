@@ -329,22 +329,21 @@
             }
         },
         bindElements: function() {
-            $( "#tourNext").unbind( "click" );
+
+            $("body").unbind( "click" );
+            
             $('body').on('click', '#tourNext', function() {
                 methods.next();
             });
 	    
-            $( "#tourPrev").unbind( "click" );	
             $('body').on('click', '#tourPrev', function() {
                 methods.prev();
             });
-
-            $( "#tourEnd").unbind( "click" );	
+	
             $('body').on('click', '#tourEnd', function() {
                 methods.destroy();
             });
 	    
-            $('body').unbind( "keydown" );
             $('body').on('keydown', function(e){
                 if (e.keyCode == 37) {
                     options.keyboard ? methods.prev() : ''; /* Method option keyboard */
