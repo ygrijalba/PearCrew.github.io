@@ -360,9 +360,7 @@
             
             for(var i = 1; i < options.data.length; i++)
             {
-                $('body').on('click', '#help' + i, function() {
-                    methods.goto(i);
-                });
+                $('#help' + i).click(function(){methods.goto(i);});
             }
 
             $('body').on('keydown', function(e){
