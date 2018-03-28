@@ -52,21 +52,23 @@
             if (started == false) {
                 started = true;
                 options.data.unshift({ element : 'body', tooltip: null, text: options.welcomeMessage });
-
                 controls = '<div id="tourControls">\
-                  <div id="tourText">'+options.welcomeMessage+'</div>\
-                  <ul>';
-                  for(var i = 1; i < options.data.length; i++)
-                  {
-                    controls +=  '<li id="help' +i+ '" value="'+i+'">' + options.data[i].label + '</li>';
-                  }
-                  controls += '</ul>\
-                  <div id="tourButtons">\
-                    <button id="tourPrev" style="display:none" class="'+options.buttons.prev.class+'">' + options.buttons.prev.text + '</button>\
-                    <button id="tourNext" class="'+options.buttons.start.class+'">' + options.buttons.start.text + '</button>\
-                    <button id="tourEnd" style="display:none" class="'+options.buttons.end.class+'">' + options.buttons.end.text + '</button>\
-                  </div>\
-                </div>';
+                            <div id="tourText">'+options.welcomeMessage+'</div>\
+                            <ul>';
+                  
+                var help_style =  'font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white;';
+                for(var i = 1; i < options.data.length; i++)
+                {
+                    controls +=  '<li id="help' +i+ '" value="'+i+'" style="' +help_style+ '">' + options.data[i].label + '</li>';
+                }
+
+                controls += '</ul>\
+                            <div id="tourButtons">\
+                                <button id="tourPrev" style="display:none" class="'+options.buttons.prev.class+'">' + options.buttons.prev.text + '</button>\
+                                <button id="tourNext" class="'+options.buttons.start.class+'">' + options.buttons.start.text + '</button>\
+                                <button id="tourEnd" style="display:none" class="'+options.buttons.end.class+'">' + options.buttons.end.text + '</button>\
+                            </div>\
+                            </div>';
                 $controlsCss = { 'display': 'block', 'position': 'fixed', 'width': '200px', 'padding': '10px 20px', 'border-radius': '10px', 'font-family': 'sans-serif', 'z-index': '1000' };
                 $controls = $(controls).css($controlsCss).css(options.controlsCss);
                 $cpos = methods.getControlPosition(options.controlsPosition);
