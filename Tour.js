@@ -1,5 +1,8 @@
 (function($) {
-
+    var $li_css = $('<style/>');
+    $css.appendTo('head');
+    $css.append('.help-li { font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white; }\
+                 .help-li:hover {font-weight: 600;}');
     var settings = {
         data: [],
         autoStart: false,
@@ -56,11 +59,10 @@
                             <div id="tourText">'+options.welcomeMessage+'</div>\
                             <ul>';
                   
-                var help_style =  'font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white;';
                 var btnTour_style = 'background-color: transparent; border-radius: 25px; font-size: 25px;';
                 for(var i = 1; i < options.data.length; i++)
                 {
-                    controls +=  '<li id="help' +i+ '" value="'+i+'" style="' +help_style+ '">' + options.data[i].label + '</li>';
+                    controls +=  '<li id="help' +i+ '" value="'+i+'" class="help-li">' + options.data[i].label + '</li>';
                 }
 
                 controls += '</ul>\
