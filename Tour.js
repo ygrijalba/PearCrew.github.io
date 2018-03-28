@@ -64,9 +64,21 @@
 
                 controls += '</ul>\
                             <div id="tourButtons">\
-                                <button id="tourPrev" style="display:none" class="'+options.buttons.prev.class+'">' + options.buttons.prev.text + '</button>\
-                                <button id="tourNext" class="'+options.buttons.start.class+'">' + options.buttons.start.text + '</button>\
-                                <button id="tourEnd" style="display:none" class="'+options.buttons.end.class+'">' + options.buttons.end.text + '</button>\
+                                <button id="tourPrev" style="display:none" class="'+options.buttons.prev.class+'" type="button">\
+                                    <span class="t-Icon t-Icon--left fa fa fa-ban" aria-hidden="true"></span>\
+                                    <span class="t-Button-label">' + options.buttons.prev.text + '</span>\
+                                    <span class="'+options.buttons.prev.iconclass+'" aria-hidden="true"></span>\
+                                </button>\
+                                <button id="tourNext" style="display:none" class="'+options.buttons.start.class+'" type="button">\
+                                    <span class="t-Icon t-Icon--left fa fa fa-ban" aria-hidden="true"></span>\
+                                    <span class="t-Button-label">' + options.buttons.start.text + '</span>\
+                                    <span class="'+options.buttons.start.iconclass+'" aria-hidden="true"></span>\
+                                </button>\
+                                <button id="tourEnd" style="display:none" class="'+options.buttons.end.class+'" type="button">\
+                                    <span class="t-Icon t-Icon--left fa fa fa-ban" aria-hidden="true"></span>\
+                                    <span class="t-Button-label">' + options.buttons.end.text + '</span>\
+                                    <span class="'+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
+                                </button>\
                             </div>\
                             </div>';
                 $controlsCss = { 'display': 'block', 'position': 'fixed', 'width': '200px', 'padding': '10px 20px', 'border-radius': '10px', 'font-family': 'sans-serif', 'z-index': '1000' };
