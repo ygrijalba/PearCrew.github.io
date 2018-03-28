@@ -56,9 +56,9 @@
                 controls = '<div id="tourControls">\
                   <div id="tourText">'+options.welcomeMessage+'</div>\
                   <ul>';
-                  for(var i = 0; i < options.data.length; i++)
+                  for(var i = 1; i < options.data.length; i++)
                   {
-                    controls +=  '<li>' + options.data[i].label + '</li>';
+                    controls +=  '<li id="help' +i+ '">' + options.data[i].label + '</li>';
                   }
                   controls += '</ul>\
                   <div id="tourButtons">\
@@ -115,6 +115,12 @@
 
                 methods.setTooltip(step, stepData, 'prev');
             }
+        },
+        goto: function(step) {
+            $tooltip.hide();
+            stepData = options.data[step];
+            methods.setTooltip(step, stepData, 'goto');
+            
         },
         setTooltip: function(step, stepData, dir) {
             if (options.useOverlay) {
@@ -351,7 +357,14 @@
             $('body').on('click', '#tourEnd', function() {
                 methods.destroy();
             });
-	    
+            
+            for(var i = 0; i < options.data.length; i++)
+            {
+                $('body').on('click', '#help' + i, function() {
+                    methods.goto(i);
+                });
+            }
+
             $('body').on('keydown', function(e){
                 if (e.keyCode == 37) {
                     options.keyboard ? methods.prev() : ''; /* Method option keyboard */
