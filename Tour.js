@@ -64,20 +64,17 @@
 
                 controls += '</ul>\
                             <div id="tourButtons">\
-                                <button id="tourPrev" style="display:none" class="'+options.buttons.prev.class+'" type="button">\
-                                    <span class="t-Icon t-Icon--left fa fa fa-ban" aria-hidden="true"></span>\
-                                    <span class="t-Button-label">' + options.buttons.prev.text + '</span>\
+                                <button id="tourPrev" style="display:none" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.prev.class+'" type="button">\
                                     <span class="'+options.buttons.prev.iconclass+'" aria-hidden="true"></span>\
+                                    <span class="t-Button-label">' + options.buttons.prev.text + '</span>\
                                 </button>\
-                                <button id="tourNext" style="display:none" class="'+options.buttons.start.class+'" type="button">\
-                                    <span class="t-Icon t-Icon--left fa fa fa-ban" aria-hidden="true"></span>\
-                                    <span class="t-Button-label">' + options.buttons.start.text + '</span>\
+                                <button id="tourNext" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.start.class+'" type="button">\
                                     <span class="'+options.buttons.start.iconclass+'" aria-hidden="true"></span>\
+                                    <span class="t-Button-label">' + options.buttons.start.text + '</span>\
                                 </button>\
-                                <button id="tourEnd" style="display:none" class="'+options.buttons.end.class+'" type="button">\
-                                    <span class="t-Icon t-Icon--left fa fa fa-ban" aria-hidden="true"></span>\
+                                <button id="tourEnd" style="display:none" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.end.class+'" type="button">\
+                                    <span class='+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
                                     <span class="t-Button-label">' + options.buttons.end.text + '</span>\
-                                    <span class="'+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
                                 </button>\
                             </div>\
                             </div>';
@@ -340,13 +337,13 @@
             if (step <= 0) {
                 $('#tourPrev').hide();
                 $('#tourEnd').hide();
-                $('#tourNext').html(options.buttons.start.text).attr('class', options.buttons.start.class);;
+                $('#tourNext').html(options.buttons.start.text).attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.start.class);;
             }
 
             if (step <= steps && step > 0) {
                 $('#tourPrev').show();
                 $('#tourEnd').show();
-                $('#tourNext').show().html(options.buttons.next.text).attr('class', options.buttons.next.class);
+                $('#tourNext').show().html(options.buttons.next.text).attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.next.class);
             }
         },
         findParentBg : function($element) {
