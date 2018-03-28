@@ -331,7 +331,8 @@
         },
         showHideButtons: function() {
             if (step < steps) {
-                $('#tourNext').show().html(options.buttons.next.text);
+                $('#tourNext').show();
+                $('#tourNextText').html(options.buttons.next.text);
             }
 
             if (step <= 0) {
