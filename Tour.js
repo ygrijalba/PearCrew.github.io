@@ -117,7 +117,7 @@
             }
         },
         goto: function(this_step) {
-            step = this_step;
+            step = (this_step - 1);
             // previous step location
             if (step > -1 && options.data[step].hasOwnProperty('location') && typeof(options.data[step].location) != 'undefined') {
                 location.href = options.data[step].location;
