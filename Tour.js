@@ -1,7 +1,7 @@
 (function($) {
     var $li_css = $('<style/>');
-    $css.appendTo('head');
-    $css.append('.help-li { font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white; }\
+    $li_css.appendTo('head');
+    $li_css.append('.help-li { font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white; }\
                  .help-li:hover {font-weight: 600;}');
     var settings = {
         data: [],
