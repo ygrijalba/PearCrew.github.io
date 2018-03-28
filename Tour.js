@@ -69,8 +69,8 @@
                                     <span class="t-Button-label">' + options.buttons.prev.text + '</span>\
                                 </button>\
                                 <button id="tourNext" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.start.class+'" type="button">\
-                                    <span class="'+options.buttons.start.iconclass+'" aria-hidden="true"></span>\
-                                    <span class="t-Button-label">' + options.buttons.start.text + '</span>\
+                                    <span id="tourNextIcon" class="'+options.buttons.start.iconclass+'" aria-hidden="true"></span>\
+                                    <span id="tourNextText" class="t-Button-label">' + options.buttons.start.text + '</span>\
                                 </button>\
                                 <button id="tourEnd" style="display:none" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.end.class+'" type="button">\
                                     <span class="'+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
@@ -337,13 +337,17 @@
             if (step <= 0) {
                 $('#tourPrev').hide();
                 $('#tourEnd').hide();
-                $('#tourNext').html(options.buttons.start.text).attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.start.class);;
+                $('#tourNext').attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.start.class);
+                $('#tourNextIcon').attr('class', options.buttons.start.iconclass);
+                $('#tourNextText').html(options.buttons.start.text);
             }
 
             if (step <= steps && step > 0) {
                 $('#tourPrev').show();
                 $('#tourEnd').show();
-                $('#tourNext').show().html(options.buttons.next.text).attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.next.class);
+                $('#tourNext').attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.next.class);
+                $('#tourNextIcon').attr('class', options.buttons.next.iconclass);
+                $('#tourNextText').html(options.buttons.next.text);
             }
         },
         findParentBg : function($element) {
@@ -367,19 +371,14 @@
         },
         bindElements: function() {
 
-            $("body").unbind( "click" );
-
-            $('body').on('click', '#tourNext', function() {
-                methods.next();
-            });
-	    
-            $('body').on('click', '#tourPrev', function() {
-                methods.prev();
-            });
-	
-            $('body').on('click', '#tourEnd', function() {
-                methods.destroy();
-            });
+            
+            $("#tourNext").unbind( "click" );
+            $("#tourPrev").unbind( "click" );
+            $("#tourEnd").unbind( "click" );
+            
+            $('#tourNext').click(function(){ methods.next(); });
+            $('#tourPrev').click(function(){ methods.prev(); });
+            $('#tourEnd').click(function(){ methods.destroy(); });
             
             for(var i = 1; i < options.data.length; i++)
             {
