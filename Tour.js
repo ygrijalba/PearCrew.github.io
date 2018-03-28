@@ -58,7 +58,7 @@
                   <ul>';
                   for(var i = 0; i < options.data.length; i++)
                   {
-                    controls +=  '<li>' + option.data[i].tooltip + '</li>';
+                    controls +=  '<li>' + options.data[i].tooltip + '</li>';
                   }
                   controls += '</ul>\
                   <div id="tourButtons">\
