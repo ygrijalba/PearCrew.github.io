@@ -116,10 +116,22 @@
                 methods.setTooltip(step, stepData, 'prev');
             }
         },
-        goto: function(step) {
-            $tooltip.hide();
-            stepData = options.data[step];
-            methods.setTooltip(step, stepData, 'goto');
+        goto: function(this_step) {
+            step = this_step;
+            // previous step location
+            if (step > -1 && options.data[step].hasOwnProperty('location') && typeof(options.data[step].location) != 'undefined') {
+                location.href = options.data[step].location;
+            } else {
+                step++;
+
+                if (step == steps) {
+                    methods.destroy();
+                } else {
+                    $tooltip.hide();
+                    stepData = options.data[step];
+                    methods.setTooltip(step, stepData, 'next');
+                }
+            }
             
         },
         setTooltip: function(step, stepData, dir) {
