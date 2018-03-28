@@ -73,7 +73,7 @@
                                     <span class="t-Button-label">' + options.buttons.start.text + '</span>\
                                 </button>\
                                 <button id="tourEnd" style="display:none" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.end.class+'" type="button">\
-                                    <span class='+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
+                                    <span class="'+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
                                     <span class="t-Button-label">' + options.buttons.end.text + '</span>\
                                 </button>\
                             </div>\
