@@ -54,11 +54,11 @@
                 options.data.unshift({ element : 'body', tooltip: null, text: options.welcomeMessage });
 
                 controls = '<div id="tourControls">\
-                  <div id="tourText" value="'+i+'">'+options.welcomeMessage+'</div>\
+                  <div id="tourText">'+options.welcomeMessage+'</div>\
                   <ul>';
                   for(var i = 1; i < options.data.length; i++)
                   {
-                    controls +=  '<li id="help' +i+ '">' + options.data[i].label + '</li>';
+                    controls +=  '<li id="help' +i+ '" value="'+i+'">' + options.data[i].label + '</li>';
                   }
                   controls += '</ul>\
                   <div id="tourButtons">\
