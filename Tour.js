@@ -57,6 +57,7 @@
                             <ul>';
                   
                 var help_style =  'font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white;';
+                var btnTour_style = 'background-color: transparent; border-radius: 25px;';
                 for(var i = 1; i < options.data.length; i++)
                 {
                     controls +=  '<li id="help' +i+ '" value="'+i+'" style="' +help_style+ '">' + options.data[i].label + '</li>';
@@ -64,15 +65,15 @@
 
                 controls += '</ul>\
                             <div id="tourButtons">\
-                                <button id="tourPrev" style="background-color: rgb(29, 79, 134); display:none" class="t-Button t-Button--icon t-Button--iconLeft t-Button--hot'+options.buttons.prev.class+'" type="button">\
+                                <button id="tourPrev" style="'+btnTour_style+' display:none" class="t-Button t-Button--icon t-Button--iconLeft t-Button--hot'+options.buttons.prev.class+'" type="button">\
                                     <span class="'+options.buttons.prev.iconclass+'" aria-hidden="true"></span>\
                                     <span class="t-Button-label">' + options.buttons.prev.text + '</span>\
                                 </button>\
-                                <button id="tourNext" style="background-color: rgb(29, 79, 134);" class="t-Button t-Button--icon t-Button--iconLeft  t-Button--hot'+options.buttons.start.class+'" type="button">\
+                                <button id="tourNext" style="'+btnTour_style+'" class="t-Button t-Button--icon t-Button--iconLeft  t-Button--hot'+options.buttons.start.class+'" type="button">\
                                     <span id="tourNextIcon" class="'+options.buttons.start.iconclass+'" aria-hidden="true"></span>\
                                     <span id="tourNextText" class="t-Button-label">' + options.buttons.start.text + '</span>\
                                 </button>\
-                                <button id="tourEnd" style="background-color: rgb(29, 79, 134); display:none" class="t-Button t-Button--icon t-Button--iconLeft  t-Button--hot'+options.buttons.end.class+'" type="button">\
+                                <button id="tourEnd" style="'+btnTour_style+' display:none" class="t-Button t-Button--icon t-Button--iconLeft  t-Button--hot'+options.buttons.end.class+'" type="button">\
                                     <span class="'+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
                                     <span class="t-Button-label">' + options.buttons.end.text + '</span>\
                                 </button>\
@@ -338,7 +339,6 @@
             if (step <= 0) {
                 $('#tourPrev').hide();
                 $('#tourEnd').hide();
-                $('#tourNext').attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.start.class);
                 $('#tourNextIcon').attr('class', options.buttons.start.iconclass);
                 $('#tourNextText').html(options.buttons.start.text);
             }
@@ -346,7 +346,6 @@
             if (step <= steps && step > 0) {
                 $('#tourPrev').show();
                 $('#tourEnd').show();
-                $('#tourNext').attr('class', 't-Button t-Button--icon   t-Button--iconLeft ' + options.buttons.next.class);
                 $('#tourNextIcon').attr('class', options.buttons.next.iconclass);
                 $('#tourNextText').html(options.buttons.next.text);
             }
