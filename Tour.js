@@ -54,7 +54,7 @@
                 options.data.unshift({ element : 'body', tooltip: null, text: options.welcomeMessage });
 
                 controls = '<div id="tourControls">\
-                  <div id="tourText">'+options.welcomeMessage+'</div>\
+                  <div id="tourText" value="'+i+'">'+options.welcomeMessage+'</div>\
                   <ul>';
                   for(var i = 1; i < options.data.length; i++)
                   {
@@ -360,7 +360,7 @@
             
             for(var i = 1; i < options.data.length; i++)
             {
-                $('#help' + i).click(function(){methods.goto(i);});
+                $('#help' + i).click(function(){methods.goto(this.value);});
             }
 
             $('body').on('keydown', function(e){
