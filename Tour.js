@@ -155,6 +155,9 @@ var tour = {};
                     $overlay = $('<div id="touroverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: '+options.overlayZindex+'; background-color: rgba(0,0,0,0.5);">');
                 }
                 $('body').append($overlay);
+                $overlay.click(function(){
+                    methods.destroy();
+                 });
             }
             
             $previousElement = (dir == 'next') ? $(options.data[step-1].element) : $(options.data[step+1].element);
@@ -423,11 +426,7 @@ var tour = {};
 
 })(jQuery);
 
-function closeDialogClickOutside(elem){
-    $('.ui-widget-overlay').click(function(){
-       $(elem).dialog('close');
-    });
- }
+
 // Direct Access
 $.aSimpleTour = function(opts, startFrom) 
                 { 
