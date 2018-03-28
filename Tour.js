@@ -427,6 +427,7 @@ var tour = {};
 // Direct Access
 $.aSimpleTour = function(opts, startFrom) 
                 { 
+                    opts.autoStart = false;
                     opts.controlsPosition = 'TR';
                     opts.buttons = {
                                     next  : { text : '', class : '', iconclass: 'fa fa-chevron-circle-right'},
