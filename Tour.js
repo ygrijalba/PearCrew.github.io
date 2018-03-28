@@ -368,7 +368,7 @@ var tour = {};
             started = false;
             options.keyboard = false; /* Bug fixed with option keyboard */
             if (options.useOverlay) {
-                $overlay.remove();    
+                if ($overlay) { $overlay.remove()};    
             } 
 
         },
