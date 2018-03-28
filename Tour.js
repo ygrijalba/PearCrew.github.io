@@ -358,9 +358,9 @@
                 methods.destroy();
             });
             
-            for(var i = 0; i < options.data.length; i++)
+            for(var i = 1; i < options.data.length; i++)
             {
-                $('body').on('click', '#help' + i, function() {
+                $('body').on('click', '#help' + i, function(i) {
                     methods.goto(i);
                 });
             }
