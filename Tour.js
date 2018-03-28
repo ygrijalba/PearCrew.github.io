@@ -11,12 +11,12 @@ var tour = {};
         useOverlay: true,
         overlayZindex: 10,
         keyboard: true, /* Option for keyboard */
-        welcomeMessage: '<h2>Tour</h2><p>Welcome to the Tour Plugin</p>',
+        welcomeMessage: '<h2>Sorry!</h2>There is no help available for this page yet.</p>',
         buttons: {
-            next  : { text : 'Next', class : ''},
-            prev  : { text : 'Previous', class: '' },
-            start : { text : 'Start', class: '' },
-            end   : { text : 'End', class: '' }
+            next  : { text : '', class : ''},
+            prev  : { text : '', class: '' },
+            start : { text : '', class: '' },
+            end   : { text : '', class: '' }
         },
         controlsCss: {
             background: 'rgba(8, 68, 142, 0.80)',
