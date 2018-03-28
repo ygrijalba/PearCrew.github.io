@@ -64,15 +64,15 @@
 
                 controls += '</ul>\
                             <div id="tourButtons">\
-                                <button id="tourPrev" style="display:none" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.prev.class+'" type="button">\
+                                <button id="tourPrev" style="background-color: rgb(29, 79, 134); display:none" class="t-Button t-Button--icon t-Button--iconLeft t-Button--hot'+options.buttons.prev.class+'" type="button">\
                                     <span class="'+options.buttons.prev.iconclass+'" aria-hidden="true"></span>\
                                     <span class="t-Button-label">' + options.buttons.prev.text + '</span>\
                                 </button>\
-                                <button id="tourNext" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.start.class+'" type="button">\
+                                <button id="tourNext" style="background-color: rgb(29, 79, 134);" class="t-Button t-Button--icon t-Button--iconLeft  t-Button--hot'+options.buttons.start.class+'" type="button">\
                                     <span id="tourNextIcon" class="'+options.buttons.start.iconclass+'" aria-hidden="true"></span>\
                                     <span id="tourNextText" class="t-Button-label">' + options.buttons.start.text + '</span>\
                                 </button>\
-                                <button id="tourEnd" style="display:none" class="t-Button t-Button--icon   t-Button--iconLeft '+options.buttons.end.class+'" type="button">\
+                                <button id="tourEnd" style="background-color: rgb(29, 79, 134); display:none" class="t-Button t-Button--icon t-Button--iconLeft  t-Button--hot'+options.buttons.end.class+'" type="button">\
                                     <span class="'+options.buttons.end.iconclass+'" aria-hidden="true"></span>\
                                     <span class="t-Button-label">' + options.buttons.end.text + '</span>\
                                 </button>\
