@@ -57,7 +57,7 @@
                             <ul>';
                   
                 var help_style =  'font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white;';
-                var btnTour_style = 'background-color: transparent; border-radius: 25px;';
+                var btnTour_style = 'background-color: transparent; border-radius: 25px; font-size: 25px;';
                 for(var i = 1; i < options.data.length; i++)
                 {
                     controls +=  '<li id="help' +i+ '" value="'+i+'" style="' +help_style+ '">' + options.data[i].label + '</li>';
