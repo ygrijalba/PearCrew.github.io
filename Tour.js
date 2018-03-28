@@ -1,3 +1,4 @@
+var tour;
 (function($) {
     var $li_css = $('<style/>');
     $li_css.appendTo('head');
