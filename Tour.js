@@ -426,24 +426,22 @@
 // Direct Access
 $.aSimpleTour = function(opts, startFrom) 
                 { 
-                    opts.push({
-                                controlsPosition : 'TR',
-                                buttons: {
+                    opts.controlsPosition = 'TR';
+                    opts.buttons = {
                                     next  : { text : '', class : '', iconclass: 'fa fa-chevron-circle-right'},
                                     prev  : { text : '', class: '', iconclass: 'fa fa-chevron-circle-left'},
                                     start : { text : '', class: '', iconclass: 'fa fa-play-circle'},
                                     end   : { text : '', class: '', iconclass: 'fa fa-times-circle' }
-                                },
-                                controlsCss: {
-                                    background: 'rgba(38, 120, 207, 0.88)',
-                                    color: 'rgb(255, 255, 255)',
-                                    width: '400px',
-                                    'border-radius': "10px",
-                                    'font-size': '13px',
-                                    'box-shadow': '-1px 0px 3px 1px rgba(22, 69, 119, 0.4588235294117647)'
-                                }
-                            });
-
+                                };
+                    
+                    opts.controlsCss = {
+                                            background: 'rgba(38, 120, 207, 0.88)',
+                                            color: 'rgb(255, 255, 255)',
+                                            width: '400px',
+                                            'border-radius': "10px",
+                                            'font-size': '13px',
+                                            'box-shadow': '-1px 0px 3px 1px rgba(22, 69, 119, 0.4588235294117647)'
+                                        }
                     $.fn.aSimpleTour(opts, startFrom);  
                     return this; 
                 }
