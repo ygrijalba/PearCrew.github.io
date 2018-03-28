@@ -56,7 +56,7 @@
                 controls = '<div id="tourControls">\
                   <div id="tourText">'+options.welcomeMessage+'</div>\
                   <ul>';
-                  for(var i; i < option.data.length; i++)
+                  for(var i; i < options.data.length; i++)
                   {
                     controls +=  '<li>' + option.data[i].tooltip + '</li>';
                   }
