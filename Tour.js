@@ -423,7 +423,11 @@ var tour = {};
 
 })(jQuery);
 
-
+function closeDialogClickOutside(elem){
+    $('.ui-widget-overlay').click(function(){
+       $(elem).dialog('close');
+    });
+ }
 // Direct Access
 $.aSimpleTour = function(opts, startFrom) 
                 { 
