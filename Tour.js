@@ -208,7 +208,7 @@ var tour = {};
                 $tooltip.css({ 'top': $pos.top + 'px', 'left': $pos.left + 'px' });
                 $tooltip.show('fast');
 
-                $.scrollTo(stepData.element, 200, { offset: -100 });    
+                $.scrollTo(stepData.element, 200, { offset: 50 });    
             }
            
             if (step == steps) {
