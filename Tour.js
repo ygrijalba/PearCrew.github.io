@@ -366,8 +366,8 @@ var tour = {};
             $('#tourControls').remove();
             $('#tourtip').remove();
             $tooltip.css({ 'display': 'none' }).html('');
-            options.data.shift();
             $(options.data[step]).css("z-index","auto");
+            options.data.shift();
             step = -1;
             started = false;
             options.keyboard = false; /* Bug fixed with option keyboard */
