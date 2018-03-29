@@ -204,7 +204,7 @@ var tour = {};
                 
                 tooltipPos = (typeof stepData.position == 'undefined') ? 'BL' : stepData.position;
                 $pos = methods.getTooltipPosition(tooltipPos, $element);
-                var maxWidth = $('#'+stepData.element).width();
+                var maxWidth = $(stepData.element).width();
                 $tooltip.css({ 'top': $pos.top + 'px', 'left': $pos.left + 'px', 'max-width': maxWidth + 'px' });
                 $tooltip.show('fast');
 
