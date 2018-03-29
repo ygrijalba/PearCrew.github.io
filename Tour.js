@@ -204,8 +204,8 @@ var tour = {};
                 
                 tooltipPos = (typeof stepData.position == 'undefined') ? 'BL' : stepData.position;
                 $pos = methods.getTooltipPosition(tooltipPos, $element);
-
-                $tooltip.css({ 'top': $pos.top + 'px', 'left': $pos.left + 'px', 'max-width': $('#'+stepData.element).width()+'px' });
+                var maxWidth = $('#'+stepData.element).width();
+                $tooltip.css({ 'top': $pos.top + 'px', 'left': $pos.left + 'px', 'max-width': maxWidth + 'px' });
                 $tooltip.show('fast');
 
                 $.scrollTo(stepData.element, 200, { offset: -225 });    
