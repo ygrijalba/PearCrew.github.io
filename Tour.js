@@ -170,7 +170,7 @@ var tour = {};
             $element = $(stepData.element).eq(0);
             tour_data = { 'zindex' : $element.css('z-index'), 'position' : $element.css('position'), 'background-color' : $element.css('background-color') };
             $element.data('tour-data', tour_data);
-            $element.css('position', 'relative').css('z-index', 1000)
+            $element.css('position', 'relative').css('z-index', 459)
             if (options.useOverlay) {
                 bgc = ($element.css('background-color') == 'transparent') ? methods.findParentBg($element) : $element.css('background-color');    
                 $element.css('background-color', bgc);
