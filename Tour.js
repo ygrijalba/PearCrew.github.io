@@ -366,7 +366,7 @@ var tour = {};
             $('#tourControls').remove();
             $('#tourtip').remove();
             $tooltip.css({ 'display': 'none' }).html('');
-            $(options.data[step]).css("z-index","auto");
+            $(options.data[step-1]).css("z-index","auto");
             options.data.shift();
             step = -1;
             started = false;
