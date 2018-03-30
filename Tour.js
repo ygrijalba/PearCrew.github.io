@@ -450,4 +450,35 @@ $.aSimpleTour = function(opts, startFrom)
                                         }
                     $.fn.aSimpleTour(opts, startFrom);  
                     return this; 
-                }
+                };
+
+// call process
+function HelpTour_OnClick (Page_ID)
+{
+    var ajaxp = apex.server.process ( 'P_GET_HELP_TOUR', 
+                    {
+                        x01 : Page_ID
+                    },
+                    {
+                    success: function( pData )
+                                {   
+                                    if(pData.x01)
+                                    {
+                                        alert(pData.x01);
+                                    }
+                                    else
+                                    {
+                                        tour.data = pData.obj; //data
+                                        tour.welcomeMessage = pData.welcomeMessage; //welcome msg
+                                        $.aSimpleTour(tour) 
+                                    }
+                                },
+                    error: function(pData )
+                                {   
+
+                                    var errorMsg = pData.responseText.split("SQL:");  
+                                    alert("Error: " + errorMsg[0]);
+                                }
+                    }
+                );
+}
