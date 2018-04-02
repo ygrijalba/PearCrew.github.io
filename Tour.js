@@ -476,7 +476,7 @@ function HelpTour_OnClick (Page_ID)
                                     else
                                     {
                                         // if there is help for this page then do this
-                                        if (pData.obj.length != undefined )
+                                        if (pData.obj != undefined )
                                         {
                                             var data = [];
                                             jQuery.each( pData.obj, function( i, val ) 
