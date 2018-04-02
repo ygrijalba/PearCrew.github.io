@@ -369,6 +369,7 @@ var tour = {};
             $('#tourtip').remove();
             $tooltip.css({ 'display': 'none' }).html('');
             $(options.data[step - 1].element).css("z-index","auto");
+            $(options.data[step].element).css("z-index","auto");
             step = options.data.length;
             options.data.shift();
             step = -1;
