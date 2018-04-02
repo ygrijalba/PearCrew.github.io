@@ -474,7 +474,7 @@ function HelpTour_OnClick (Page_ID)
                                             var ele = pData.obj[i].element;
 
                                             // remove element that are not shown in the page (conditional elements)
-                                            if ($("#" + ele ).length > 0 && $( "#" + ele ).attr("type") != "hidden")
+                                            if ($(ele).length > 0 && $(ele).attr("type") != "hidden")
                                             {
                                                 data.push({ element : ele,
                                                             label : pData.obj[i].label,
@@ -487,7 +487,7 @@ function HelpTour_OnClick (Page_ID)
 
                                         if(data.length > 0) //data
                                             tour.data = data; 
-                                            
+
                                         tour.welcomeMessage = pData.welcomeMessage; //welcome msg
                                         $.aSimpleTour(tour) 
                                     }
