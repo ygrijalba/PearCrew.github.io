@@ -368,7 +368,7 @@ var tour = {};
             $('#tourControls').remove();
             $('#tourtip').remove();
             $tooltip.css({ 'display': 'none' }).html('');
-            $(options.data[step-1].element).css("z-index","auto");
+            $(options.data[step].element).css("z-index","auto");
             options.data.shift();
             step = -1;
             started = false;
@@ -388,7 +388,8 @@ var tour = {};
             $('#tourNext').click(function(){ methods.next(); });
             $('#tourPrev').click(function(){ methods.prev(); });
             $('#tourEnd').click(function(){ methods.destroy(); });
-            
+
+            //cilck on the index link
             for(var i = 1; i < options.data.length; i++)
             {
                 $('#help' + i).click(function(){methods.goto(this.value);});
