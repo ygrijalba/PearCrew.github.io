@@ -468,7 +468,26 @@ function HelpTour_OnClick (Page_ID)
                                     }
                                     else
                                     {
-                                        tour.data = pData.obj; //data
+                                        var data = [];
+                                        jQuery.each( pData.obj, function( i, val ) 
+                                        {
+                                            var ele = pData.obj[i].element;
+
+                                            // remove element that are not shown in the page (conditional elements)
+                                            if ($("#" + ele ).length > 0 && $( "#" + ele ).attr("type") != "hidden")
+                                            {
+                                                data.push({ element : ele,
+                                                            label : pData.obj[i].label,
+                                                            'tooltip': pData.obj[i].tooltip,
+                                                            'position': pData.obj[i].position
+                                                          });
+                                            }    
+
+                                        });
+
+                                        if(data.length > 0) //data
+                                            tour.data = data; 
+                                            
                                         tour.welcomeMessage = pData.welcomeMessage; //welcome msg
                                         $.aSimpleTour(tour) 
                                     }
