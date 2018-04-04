@@ -58,7 +58,7 @@ var tour = {};
                 options.data.unshift({ element : 'body', tooltip: null, text: options.welcomeMessage });
                 controls = '<div id="tourControls">\
                             <div id="tourText">'+options.welcomeMessage+'</div>\
-                            <ul>';
+                            <ol>';
                   
                 var btnTour_style = 'background-color: transparent; border-radius: 25px; font-size: 25px;';
                 for(var i = 1; i < options.data.length; i++)
@@ -66,7 +66,7 @@ var tour = {};
                     controls +=  '<li id="help' +i+ '" value="'+i+'" class="help-li">' + options.data[i].label + '</li>';
                 }
 
-                controls += '</ul>\
+                controls += '</ol>\
                             <div id="tourButtons">\
                                 <button id="tourPrev" style="'+btnTour_style+' display:none" class="t-Button t-Button--icon t-Button--iconLeft t-Button--hot'+options.buttons.prev.class+'" type="button">\
                                     <span class="'+options.buttons.prev.iconclass+'" aria-hidden="true"></span>\
