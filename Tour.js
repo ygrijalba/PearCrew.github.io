@@ -9,7 +9,7 @@ var tour = {};
         autoStart: false,
         controlsPosition: 'TR',
         useOverlay: true,
-        overlayZindex: 10,
+        overlayZindex: 302,
         keyboard: true, /* Option for keyboard */
         welcomeMessage: '<h2>Sorry!</h2>There is no help available for this page yet.</p>',
         buttons: {
