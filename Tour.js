@@ -1,9 +1,34 @@
 var tour = {};
 (function($) {
-    var $li_css = $('<style/>');
-    $li_css.appendTo('head');
-    $li_css.append('.help-li { font-size: 1.2rem; line-height: 1.6rem; cursor: pointer; text-decoration: underline;color: white; }\
-                 .help-li:hover {font-weight: 600;}');
+    var $css = $('<style/>');
+    $css.appendTo('head');
+    $css.append('.help-li\
+                    {\
+                        font-size: 1.2rem;\
+                        line-height: 1.6rem;\
+                        cursor: pointer;\
+                        text-decoration: underline;\
+                        color: white;\
+                    }\
+                    .help-li:hover\
+                    {\
+                        font-weight: 600;\
+                    }\
+                    .help-li:hover\
+                    {\
+                        font-weight: 600;\
+                    }');
+    $css.append('.tooltip-tourtip\
+                {\
+                  display      : none;\
+                  padding      : 10px 20px;\
+                  position     : absolute;\
+                  font-family  : sans-serif;\
+                  border-radius: 5px;\
+                  font-size    : 12px;\
+                  box-sizing   : border-box;\
+                  z-index      : 2000;\
+                }');
     var settings = {
         data: [],
         autoStart: false,
@@ -37,16 +62,7 @@ var tour = {};
         id: 'tourtip',
         className: 'tourtip',
         html: ''
-    }).css({
-        'display': 'none',
-        'padding': '10px 20px',
-        'position': 'absolute',
-        'font-family': 'sans-serif',
-        'border-radius': '5px',
-        'font-size': '12px',
-        'box-sizing': 'border-box',
-        'z-index' : '2000'
-    });
+    }).addClass("tooltip-tourtip");
 
     var methods = {
         init: function(opts, startFrom) {
