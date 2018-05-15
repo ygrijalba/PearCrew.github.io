@@ -29,7 +29,7 @@ var tour = {};
                   box-sizing   : border-box;\
                   z-index      : 2000;\
                 }\
-                .tooltip-tourtip p\
+                #tourText p\
                 {\
                     line-height: 14px;\
                 }');
