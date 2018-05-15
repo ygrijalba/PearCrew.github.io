@@ -28,6 +28,10 @@ var tour = {};
                   font-size    : 12px;\
                   box-sizing   : border-box;\
                   z-index      : 2000;\
+                }\
+                .tooltip-tourtip p\
+                {\
+                    line-height: 14px;\
                 }');
     var settings = {
         data: [],
